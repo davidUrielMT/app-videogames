@@ -1,0 +1,18 @@
+<div class="container pt-5">
+    <div>
+        <app-nav-bar></app-nav-bar>
+    </div>
+    <br>
+    <br>
+    <h2 class="titulo"> Próximamente </h2>
+    
+    <div class="car-container">
+        <app-game-card
+            *ngFor="let car of lastCars"
+            [car]="car"
+            (buyEvent)="onByEvent($event)"
+            (noInterestedEvent)="onNotInterestedEvent($event)"
+        ></app-game-card>
+    </div>
+    
+</div>

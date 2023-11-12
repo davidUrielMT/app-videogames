@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <img class="mb-4" src="./../../../assets/images/icon.png" alt="" width="45" height="45">
+    <a class="navbar-brand">VideoGames Store</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" [routerLink]="'/module-main/popular-games'" [routerLinkActive]="'active'">
+          <a class="nav-link" >Más populares   <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item" [routerLink]="'/module-main/downloaded-games'" [routerLinkActive]="'active'">
+          <a class="nav-link" >Más descargados   </a>
+        </li>
+        <li class="nav-item" [routerLink]="'/module-main/upcoming-games'" [routerLinkActive]="'active'">
+          <a class="nav-link" >Proximamente   </a>
+        </li>
+        <li class="nav-item" [routerLink]="'/module-main/add-game'" [routerLinkActive]="'active'">
+          <a class="nav-link" >Agregar   </a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" [routerLink]="'/module-auth/login'">
+            <a class="nav-link" >   Salir</a>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </nav>

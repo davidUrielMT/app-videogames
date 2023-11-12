@@ -1,0 +1,18 @@
+<div class="text-center login-container">
+    <div class="form-signin" [formGroup]="loginForm">
+        <img class="mb-4" src="./../../../assets/images/icon.png" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">VideoGames Store <br> Bienvenido</h1>
+
+        <label for="inputEmail" class="sr-only">Email:</label><br>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus formControlName="email" (keypress)="onKeyPress($event)">
+        <p style="color: rgb(120, 4, 4)" *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid">email requerido</p>
+        <br>
+        <label for="inputPassword" class="sr-only">Contraseña:</label><br>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required formControlName="password">
+        <p style="color: rgb(120, 4, 4)" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">contraseña requerida</p>
+        <br>
+        <button class="btn btn-lg btn-primary btn-block" (click)="onLogin()">Iniciar sesión</button><br>
+        <button class="btn btn-lg btn-secondary btn-block" (click)="onSignIn()">Registrarse</button>
+        <p class="mt-5 mb-3 text-muted">&copy; uveg</p>
+    </div>
+</div>
